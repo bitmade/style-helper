@@ -1,0 +1,33 @@
+// breakpoints
+$bm-small: 320px;
+$bm-medium: 768px;
+$bm-large: 1024px;
+$bm-big: 1280px;
+$bm-huge: 1440px;
+
+/// Grid columns
+/// @type Number
+$bm-columns: 12;
+
+/// Page-width in pixels
+/// @type Number
+$bm-page-width: 1200px;
+
+/// Column-width in pixels
+/// @type Number
+$bm-column-width: 80px;
+
+/// Gutter-width in pixels
+/// @type Number
+$bm-gutter-width: 20px;
+
+/// Susy-grid-setup
+/// @type Map
+$susy: (
+  columns: $bm-columns,
+  column-width: $bm-column-width,
+  gutters: $bm-gutter-width / $bm-column-width,
+  math: fluid,
+  output: float,
+  gutter-position: inside-static,
+);
