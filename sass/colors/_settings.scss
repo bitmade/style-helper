@@ -1,0 +1,10 @@
+// default colors
+$bm-primary: black;
+$bm-secondary: gray;
+
+/// Colormap to organize project-colors
+/// @type Map
+$colors: (
+  primary: $bm-primary,
+  secondary: $bm-secondary
+);

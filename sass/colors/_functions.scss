@@ -1,0 +1,13 @@
+/// Sets a color from a given map-key
+/// @param {String} A key from a map
+/// @return {String} a color
+/// @requires $colors
+@function color($key, $map: $colors) {
+
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
