@@ -26,11 +26,22 @@
 
 /// Initializing default font-size and line-height to an element.
 /// This mixin is intended to be applied to a root element, such as `body` or `html`
-/// @param {Number} $fontsize - A font size in PX
-/// @param {Number} $lineheight - A line-height in PX
+/// @param {String} $font [$bm-font-fallback] - A custom font that is applied, e.g. "Comic Sans"
+/// @param {Number} $fontsize - A fontsize-value in pixel
+/// @param {Number} $lineheight - A line-height-value in pixel
+/// @param {String} $fallback [$bm-font-fallback] - A font-fallback to make sure everything looks nice in its default-state
+/// @requires $bm-font-fallback
 /// @requires $bm-fontsize
 /// @requires $bm-lineheight
-@mixin set-fontsize($fontsize: $bm-fontsize, $lineheight: $bm-lineheight) {
+@mixin set-font($font: $bm-font-fallback, $fontsize: $bm-fontsize, $lineheight: $bm-lineheight, $fallback: $bm-font-fallback) {
+
+  // Use default fallback when no font is passed
+  @if $font == $fallback {
+    font-family: $font;
+  } @else { // use custom font and/or custom fallback if passed
+    font-family: $font, $fallback;
+  }
+
   @warn "Assuming all sizes are passed as pixel-values";
   font-size: $fontsize;
   line-height: $lineheight;
