@@ -1,0 +1,37 @@
+/// Adding vertical spacing to all text-blocks
+/// @param {List} $blocks - List of selectors, e.g. p, ul, ol
+@mixin set-text-blocks($blocks: $bm-text-blocks) {
+  @each $block in $blocks {
+    #{$block} {
+      @extend %bm-text-margin
+    }
+  }
+}
+
+/// Clearing vertical spacing between headlines and text-blocks to avoid "double-margins".
+/// @param {List} $headings - List of headline-selectors, e.g. h1, h2, h3, h4
+/// @param {List} $blocks - List of text-block-selectors, e.g. p, ul, ol
+@mixin set-headings($headings: $bm-headings, $blocks: $bm-text-blocks) {
+  @each $heading in $headings {
+
+    // We need to reset the top margin for every possible text-block after every headline, so we loop through all textblocks
+    @each $block in $blocks {
+
+      #{$heading} + #{$block} {
+        @extend %reset-margin-top
+      }
+    }
+  }
+}
+
+/// Initializing default font-size and line-height to an element.
+/// This mixin is intended to be applied to a root element, such as `body` or `html`
+/// @param {Number} $fontsize - A font size in PX
+/// @param {Number} $lineheight - A line-height in PX
+/// @requires $bm-fontsize
+/// @requires $bm-lineheight
+@mixin set-fontsize($fontsize: $bm-fontsize, $lineheight: $bm-lineheight) {
+  @warn "Assuming all sizes are passed as pixel-values";
+  font-size: $fontsize;
+  line-height: $lineheight;
+}

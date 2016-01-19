@@ -1,0 +1,15 @@
+/// Calculating em's from pixel-values.
+/// This functions accepts a font-size as a pixel-value and converts it into an em-based value.
+/// @param {String} $px - Pixel-value, eg. 12px
+/// @param {String} $base - The current context, this defaults to `$bm-fontsize` to make sure the em-value is relative to the global setting
+/// @example scss - em-function
+///  h1 {
+///    font-size: em(18px) // equals 1.125em
+///  }
+///
+///  h1 span {
+///    font-size: em(12px, 18px) // equals 0.66667em
+///  }
+@function em($px, $base: $bm-fontsize) {
+  @return ($px / $base) * 1em;
+}
