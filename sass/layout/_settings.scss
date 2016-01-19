@@ -5,24 +5,30 @@ $bm-large: 1024px;
 $bm-big: 1280px;
 $bm-huge: 1440px;
 
-/// Grid columns
+/// Default amount of columns to use by `$susy`
 /// @type Number
 $bm-columns: 12;
 
-/// Page-width in pixels
+/// The default page-width
 /// @type Number
 $bm-page-width: 1200px;
 
-/// Column-width in pixels
+/// Default column-width in pixels for usage with `$susy`
 /// @type Number
 $bm-column-width: 80px;
 
-/// Gutter-width in pixels
+/// Default gutter-width in pixels for usage with `$susy`
 /// @type Number
 $bm-gutter-width: 20px;
 
-/// Susy-grid-setup
+/// Susy-Grid-Setup
+/// Initializes a custom Susy-Configuration to create a grid.
 /// @type Map
+/// @prop {String} key - Setting-keywords that are required by Susy to build a grey
+/// @prop {String | Number} value - A value mapped to the settings
+/// @requires $bm-columns
+/// @requires $bm-column-width
+/// @requires $bm-gutter-width
 $susy: (
   columns: $bm-columns,
   column-width: $bm-column-width,
