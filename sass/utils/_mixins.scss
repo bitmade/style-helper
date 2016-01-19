@@ -7,7 +7,7 @@
 }
 
 /// Helper to set opacity with legacy-fallback
-/// @param {Number} $opacity
+/// @param {Number} $opacity The opacity that is applied to the element
 @mixin opacity($opacity) {
   $opacity-ie: $opacity * 100;
   opacity: $opacity;
@@ -15,15 +15,10 @@
 }
 
 /// Helper to initalize a proper viewport and text-rendering.
-/// @requires $bm-fontsize
-/// @requires $bm-lineheight
-/// `font-size: $bm-fontsize;`: setting the global base-fontsize
-/// `line-height: $bm-lineheight`: setting the global base-lineheight
-/// `overflow-y: scroll;`: forcing scrollbars to be visible, prevents weird flickering
-/// `min-height: 100%;`: making sure the page fills at least the initial viewport
-@mixin page-init($font-size: $bm-fontsize, $line-height: $bm-lineheight) {
-  font-size: $fontsize;
-  line-height: $lineheight;
+///
+/// - `overflow-y: scroll;` - forcing scrollbars to be visible, prevents weird flickering
+/// - `min-height: 100%;` - making sure the page fills at least the initial viewport
+@mixin page-init() {
   overflow-y: scroll;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;

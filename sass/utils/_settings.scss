@@ -2,7 +2,7 @@
 /// @type Map
 /// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
-$z-indexes: (
+$bm-z-indexes: (
   'heaven': 9000,
   'high': 100,
   'default': 1,
