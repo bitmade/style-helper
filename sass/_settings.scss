@@ -1,0 +1,21 @@
+// global variable & setting configuration
+
+/// Default-fontsize
+/// @type Number
+$bm-fontsize: 16px;
+
+/// Default line-height
+/// @type Number
+/// @requires $font-size
+$bm-lineheight: $bm-fontsize * 1.2;
+
+/// Z-Layer map to deal with overlaying elements
+/// @type Map
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  middle: 100,
+  high: 1000,
+  heaven: 9000
+);
+
