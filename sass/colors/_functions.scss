@@ -1,8 +1,9 @@
 /// Sets a color from a given map-key
-/// @param {String} A key from a map
+/// @param {String} $key A key from a map
+/// @param {Map} $map [$bm-colors] A map of colors
 /// @return {String} a color
-/// @requires $colors
-@function color($key, $map: $colors) {
+/// @requires $bm-colors
+@function color($key, $map: $bm-colors) {
 
   @if map-has-key($map, $key) {
     @return map-get($map, $key);

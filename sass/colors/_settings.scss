@@ -4,7 +4,9 @@ $bm-secondary: gray;
 
 /// Colormap to organize project-colors
 /// @type Map
-$colors: (
+/// @prop {String} key - Placeholder for project-colors
+/// @prop {Color} value - A color-value mapped to the key
+$bm-colors: (
   primary: $bm-primary,
   secondary: $bm-secondary
 );
