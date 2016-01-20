@@ -18,7 +18,7 @@
     @each $block in $blocks {
 
       #{$heading} + #{$block} {
-        @extend %reset-margin-top
+        @extend %bm-reset-margin-top
       }
     }
   }
