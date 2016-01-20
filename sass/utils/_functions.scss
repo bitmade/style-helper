@@ -1,7 +1,7 @@
 /// Get a z-index value from a layer name
 /// @access public
 /// @param {String} $layer - Layer's name
-/// @return {Number}
+/// @return {Number} The z-index as a Number
 /// @require $bm-z-indexes
 @function z($layer) {
   @if not map-has-key($bm-z-indexes, $layer) {

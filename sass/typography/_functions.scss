@@ -3,6 +3,7 @@
 /// @param {String} $px - Pixel-value, eg. 12px
 /// @param {String} $base [$bm-fontsize] - The current context
 /// @requires $bm-fontsize
+/// @return {Number} Fontsize in em
 /// @example scss - em-function
 ///  h1 {
 ///    font-size: em(18px) // equals 1.125em
