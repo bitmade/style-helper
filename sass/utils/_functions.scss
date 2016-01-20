@@ -3,13 +3,13 @@
 /// @param {String} $layer - Layer's name
 /// @return {Number} The z-index as a Number
 /// @require $bm-z-indexes
-@function z($layer) {
-  @if not map-has-key($bm-z-indexes, $layer) {
+@function z($layer, $map: $bm-z-indexes) {
+  @if not map-has-key($map, $layer) {
     @error 'There is no layer named `#{$layer}` in $z-indexes. '
-         + 'Layer should be one of #{map-keys($bm-z-indexes)}.';
+         + 'Layer should be one of #{map-keys($map)}.';
   }
 
-  @return map-get($bm-z-indexes, $layer);
+  @return map-get($map, $layer);
 }
 
 /// Remove (any) unit from any value
