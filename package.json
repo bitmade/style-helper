@@ -15,7 +15,7 @@
   "homepage": "https://github.com/bitmade/style-helper#readme",
   "dependencies": {
     "breakpoint-sass": "^2.6.1",
-    "normalize.css": "^3.0.3",
+    "node-normalize-scss": "^1.0.3",
     "susy": "^2.2.11"
   }
 }
