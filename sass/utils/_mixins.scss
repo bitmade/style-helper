@@ -56,7 +56,6 @@
 /// @param {List} $args - List of properties and their values, e.g. top 1em right 10%
 /// @example scss - Setting an element with an absolute position and some values
 ///   @include position(absolute, top 10px, left 10px);
-/// @link http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/ Mixin by Hugo Giraudel
 @mixin position($position, $args) {
 
   // List of offsets to check for in $args
@@ -73,10 +72,8 @@
     // Now we do the verifications
     // 1. Is the offset listed in $args? (not false)
     // 2. Is the offset value within the list range?
-    // 3. Is the offset value valid?
-    @if $i                                        // 1
-    and $i + 1 <= length($args)                   // 2
-    and type-of( nth($args, $i + 1) ) == number { // 3
+    @if $i                          // 1
+    and $i + 1 <= length($args) {   // 2
 
       // If everything is okay
       // We assign the according value to the current offset
