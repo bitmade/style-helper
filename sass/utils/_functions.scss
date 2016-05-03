@@ -20,3 +20,12 @@
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
+
+/// Make sure a value is a pixel-unit
+/// @access public
+@function ensure-pixel-unit($value) {
+  @if (unitless($value)) {
+    @return $value + px;
+  }
+  @return $value;
+}

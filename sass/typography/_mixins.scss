@@ -42,7 +42,6 @@
     font-family: $font, $fallback;
   }
 
-  @warn "Assuming all sizes are passed as pixel-values";
-  font-size: $fontsize;
-  line-height: $lineheight;
+  font-size: ensure-pixel-unit($fontsize);
+  line-height: ensure-pixel-unit($lineheight);
 }
