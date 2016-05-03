@@ -1,8 +1,21 @@
-// breakpoints
+/// Default breakpoint for small devices
+/// @type Number
 $bm-small: 320px;
+
+/// Default breakpoint for medium devices, such as small tablets in portrait mode
+/// @type Number
 $bm-medium: 768px;
+
+/// Default breakpoint for large devices, mostly smaller laptop screens oder split-screen use-cases
+/// @type Number
 $bm-large: 1024px;
+
+/// Default breakpoint for big devices, standard laptop screens
+/// @type Number
 $bm-big: 1280px;
+
+/// Default breakpoint for huge screen-sizes, HD-Desktops oder large laptops
+/// @type Number
 $bm-huge: 1440px;
 
 /// Default amount of columns to use by `$susy`
