@@ -112,7 +112,7 @@
 /// Helper to make an Element fill up all of its available space
 /// @requires {mixin} absolute
 @mixin fill-abs() {
-  @include absolute(top 100% right 100% bottom 100% left 100%);
+  @include absolute(top 0 right 0 bottom 0 left 0);
 }
 
 /// Helper to center something
