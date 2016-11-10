@@ -1,11 +1,11 @@
 {
-  "name": "style-helper",
-  "version": "1.1.0",
-  "description": "",
+  "name": "@bitmade/style-helper",
+  "version": "1.1.1",
+  "description": "SCSS helpers and boilerplate.",
   "main": "style-helper.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://joehae@github.com/bitmade/style-helper.git"
+    "url": "https://github.com/bitmade/style-helper.git"
   },
   "author": "Johannes Hagenberg <johannes@bitmade.de>",
   "license": "MIT",
